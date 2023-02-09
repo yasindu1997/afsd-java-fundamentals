@@ -1,15 +1,18 @@
 //original --> java Class
 public class Student {
+    //local variables, instance variables, static variables
+
+    //instance variables ---> int=0, double=0.0, String=null
     //attributes
     String name;
     //I owned by class
+
+    //static variables
     static int age;
     boolean isHaveGF;
     boolean isDrink;
     boolean isSing;
-
     double javaMarks;
-
     String job;
 
     //constructor --> default constructor
@@ -21,10 +24,10 @@ public class Student {
         System.out.println("This is second constructor");
     }
 
-    public Student(String x, int y, boolean c){
-        name=x;
-        age=y;
-        isDrink=c;
+    public Student(String name, int age, boolean isDrink){
+        this.name = name;
+        this.age = age;
+        this.isDrink = isDrink;
     }
 
     //behaviours
@@ -32,6 +35,9 @@ public class Student {
     //static method
     //static methods ---> static method
     public static void sing(){
+        //local variables
+        int x=90; //default value ---> no | should initialize
+        System.out.println(x);
     }
 
     //non-static method

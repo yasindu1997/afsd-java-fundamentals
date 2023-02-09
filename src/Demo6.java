@@ -8,7 +8,9 @@ public class Demo6 {
         std1.isDrink=false;
         std1.job="SE";
 
-        Student std2 = new Student("Yasindu",26,false);
+        Student std2 = new Student();
+        System.out.println(std2.javaMarks);
+
 
     }
 }
