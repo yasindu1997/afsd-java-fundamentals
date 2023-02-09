@@ -12,6 +12,21 @@ public class Student {
 
     String job;
 
+    //constructor --> default constructor
+    public Student(){
+        System.out.println("This is first constructor");
+    }
+
+    public Student(int x){
+        System.out.println("This is second constructor");
+    }
+
+    public Student(String x, int y, boolean c){
+        name=x;
+        age=y;
+        isDrink=c;
+    }
+
     //behaviours
 
     //static method
