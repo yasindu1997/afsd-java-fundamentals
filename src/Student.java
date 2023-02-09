@@ -2,7 +2,7 @@
 public class Student {
     //local variables, instance variables, static variables
 
-    //instance variables ---> int=0, double=0.0, String=null
+    //instance variables ---> int=0, double=0.0, String=null, boolean=false
     //attributes
     String name;
     //I owned by class
@@ -12,12 +12,14 @@ public class Student {
     boolean isHaveGF;
     boolean isDrink;
     boolean isSing;
+
     double javaMarks;
     String job;
 
     //constructor --> default constructor
     public Student(){
-        System.out.println("This is first constructor");
+        System.out.println("Hello I am Instance block");
+        System.out.println("Hello I am constructor");
     }
 
     public Student(int x){
@@ -28,6 +30,16 @@ public class Student {
         this.name = name;
         this.age = age;
         this.isDrink = isDrink;
+    }
+
+    //instance block
+    {
+
+    }
+
+    //static block
+    static{
+
     }
 
     //behaviours
