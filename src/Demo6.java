@@ -9,8 +9,8 @@ public class Demo6 {
         std1.job="SE";
 
         Student std2 = new Student();
-        System.out.println(std2.name);
+        System.out.println(std2.house);
 
-
+        Example2 ex = new Example4();
     }
 }

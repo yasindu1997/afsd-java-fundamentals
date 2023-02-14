@@ -3,12 +3,13 @@ public class Student {
     //local variables, instance variables, static variables
 
     //instance variables ---> int=0, double=0.0, String=null, boolean=false
+
     //attributes
     String name;
     //I owned by class
 
     //static variables
-    static int age;
+    int age;
     boolean isHaveGF;
     boolean isDrink;
     boolean isSing;
@@ -16,9 +17,10 @@ public class Student {
     double javaMarks;
     String job;
 
+    House house;
+
     //constructor --> default constructor
     public Student(){
-        System.out.println("Hello I am Instance block");
         System.out.println("Hello I am constructor");
     }
 
@@ -32,14 +34,14 @@ public class Student {
         this.isDrink = isDrink;
     }
 
-    //instance block
+    //instance block ---> initialize instance variables with default values
     {
-
+        System.out.println("Hello I am instance block");
     }
 
-    //static block
+    //static block ---> initialize static variables with default values
     static{
-
+        System.out.println("Hello I am static block");
     }
 
     //behaviours
