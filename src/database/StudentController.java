@@ -1,13 +1,18 @@
 package database;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Scanner;
 
 public class StudentController {
     public static void main(String[] args) {
+        //insert, delete, update ---> executeUpdate()
+        //select ---> executeQuery()
+
+        //saveStudent();
+        loadData();
+    }
+    
+    public static void saveStudent(){
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Enter Student'S ID : ");
@@ -51,6 +56,27 @@ public class StudentController {
         }catch (SQLException | ClassNotFoundException ex){
             System.out.println("SQL or Driver Error..Please Check ---> "+ex);
         }
+    }
+    
+    public static void loadData(){
+        try {
+            //mysql Driver ram ekata load karanawa
+            Class.forName("com.mysql.cj.jdbc.Driver");
 
+            //mysql server eke adala database ekath ekka connection ekk hadagnnawa
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo_afsd", "root", "yasindu@ijse");
+
+            PreparedStatement stm = connection.prepareStatement("select * from students");
+
+            ResultSet resultSet = stm.executeQuery();
+
+            while(resultSet.next()){
+                System.out.println("[ "+resultSet.getObject(1)+" "+resultSet.getObject(2)+" "+resultSet.getObject(3)+" "+resultSet.getObject(4)+" "+resultSet.getObject(5)+" ]");
+            }
+
+
+        }catch (SQLException | ClassNotFoundException ex){
+            System.out.println("SQL or Driver Error..Please Check ---> "+ex);
+        }
     }
 }
